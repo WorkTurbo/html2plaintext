@@ -62,7 +62,7 @@ function collapseWhitespace (val) {
 }
 
 function linebreaks (str) {
-  var output = str.replace(/<\s?(p|br)[^<]*>/gi, function (x, tag) {
+  var output = str.replace(/<\s?(p|br|div)[^<]*>/gi, function (x, tag) {
     switch (tag.toLowerCase()) {
       case 'p':
         return '\n\n';
